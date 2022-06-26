@@ -1,0 +1,271 @@
+:root {
+    --black: #181719;
+    --white: #FFFFFF;
+    --gray: #A9A9A9;
+
+
+    --logoFont: 'Crimson Pro', serif;
+    --primFont: 'Lora', serif;
+    --secFont: 'Montserrat', sans-serif;   
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+box-sizing: border-box;
+font-size: 62.5%;
+}
+
+body {
+    background-color: var(--black);
+    font-family: var(--secFont);
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+img {
+    max-width: 100%;
+}
+
+.bar {
+    display: flex;    
+    margin: 5rem auto 16rem auto;
+    width: min(90%, 128.6rem);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    margin-right: 8.6rem;
+     
+}
+
+.burger-menu {
+    display: none;
+    font-size: 2.4rem;
+}
+
+
+.menu a:last-of-type {
+    margin-right: 0;    
+}
+
+.menu a:hover {
+    font-weight: 700;
+    border-bottom: 3px solid var(--white);
+    padding-bottom: .8rem;
+ }
+
+.logotype {
+    font-family: var(--logoFont);
+    font-size: 1.4rem;
+    padding: 1rem;
+    border: 2px solid var(--white);    
+}
+
+.info p {
+    margin-bottom: 4.8rem;
+}
+
+.read-more i {
+    color: white;
+    font-size: 1.8rem;
+    
+}
+
+.read-more {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.container {
+    display: grid;
+    grid-template: 1fr 10% / 40% 1fr;
+    width: min(90%, 128.6rem);
+    margin: 0 auto;
+    align-items: center;    
+}
+
+.title-info {
+    font-family: var(--primFont);
+    font-size: 4.8rem;
+}
+
+.text-info {
+    margin: 0;
+    max-width: 72%;
+    font-size: 2.4rem;
+    font-weight: 400;
+ }
+
+
+/* Recuadro de perfil */ 
+.cont-profile {  
+    grid-column: 2 / 3;
+    margin-top: -8rem;
+    margin-right: 3rem;
+    justify-self: end;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column; 
+    padding-top: 1rem;
+    padding-left: 1.4rem;    
+    padding-right: 20rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: max-content;
+}
+
+.profile {
+    display: flex;       
+    justify-content:flex-start;
+    align-items: center;    
+    gap: 1.5rem;
+}
+
+.info-profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-profile {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+}
+
+footer p{
+    text-align: center;
+    margin: 12rem auto;
+}
+
+.name {
+    font-size: 1.4rem;
+    margin-bottom: .5rem;
+}
+
+.profession {
+    color: var(--gray);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+.designed-by {
+    font-size: 2.4rem;
+    font-family: var(--primFont);
+}
+
+
+@media (max-width: 768px) {
+
+    .bar {
+       margin-bottom: 4rem;
+    }
+
+
+    .menu a {
+            margin-right: 1.5rem;
+    
+        }
+
+    .container {
+        margin: 0 15rem 0 3rem;        
+        grid-template-columns: 33% 1fr;;
+    }
+
+    
+    .title-info {
+        font-size: 3.6rem;
+    }
+
+    .text-info {
+        font-size: 1.4rem;
+    }
+
+    .read-more {
+        margin-top: 2rem;
+    }
+
+    footer p {
+        text-align: center;
+        margin-top: 38rem;
+    }
+
+    .cont-profile {
+        margin-top: 0;
+    }
+
+}
+
+
+@media(max-width: 512px) {
+   
+    .menu {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .bar {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+
+
+    .info p {
+        margin-bottom: 2rem;
+    }
+    .title-info {
+        font-weight: 400;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+        gap: 3rem;
+        margin-bottom: 0;
+    }
+
+    .cont-profile {
+        justify-self: center;
+        min-width: 80%;
+        margin: -7rem 5rem 0 5rem;
+        padding-right: 0;
+    }
+
+    .info-profile {
+        min-width: max-content;
+    }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .profession {
+        font-size: 1rem;
+    }
+
+    .designed-by {
+        font-size: 1.8rem;
+        max-width: fit-content;
+    }
+
+   
+    footer p {
+    font-size: 1.4rem;
+    margin-top: 6rem;
+    }
+
+
+} 
